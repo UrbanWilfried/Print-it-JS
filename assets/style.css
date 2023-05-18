@@ -53,9 +53,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
-	
-}
 section {
 	margin-block: 6em;
 }
@@ -103,7 +100,7 @@ header {
 .devis {
 	background-color: var(--secondary-color);
 }
-
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 #banner {
 	display: flex;
 	flex-direction: column;
@@ -113,25 +110,46 @@ header {
 	min-height: 470px;
 	position: relative;
 }
-.banner-img {
+.slider {
 	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.slider img {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
 }
-/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+.slider p {
+	position: relative;
+	bottom: 300px;
+	margin: auto;
+}
+.slider .carousel {
+	height: 100%;
+	display: none;
+}
+.slider .carousel.active {
+	display: block;
+}
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	width: 100%;
 }
 #banner .arrow_left {
+	position: relative;
+	float: left;
 	left: 10px;
 }
 #banner .arrow_right {
+	position: relative;
+	float: right;
 	right: 10px;
 }
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
