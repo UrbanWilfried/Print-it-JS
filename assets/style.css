@@ -136,18 +136,18 @@ header {
 }
 /* Gestion des fleches du carrousel */
 #banner .arrow {
-	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
 	width: 100%;
 }
 #banner .arrow_left {
-	position: relative;
-	float: left;
-	left: 60px;
+	margin-left: 60px;
+	
 }
 #banner .arrow_right {
-	position: relative;
-	float: right;
-	right: 60px;
+	margin-right: 60px;
+	
 }
 
 /* Gestion des points du carrousel */
