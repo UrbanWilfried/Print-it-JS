@@ -18,37 +18,37 @@
 ]
 */
 
-const slider = document.querySelectorAll('.carousel')
-const bullet = document.querySelectorAll('.dot')
-const nbSlide = slider.length
+const carousel = document.querySelectorAll('.carousel')
+const dot = document.querySelectorAll('.dot')
+const nbSlide = carousel.length
 const next = document.querySelector('.arrow_right')
 const previous = document.querySelector('.arrow_left')
-let count = 0
+let index = 0
 
 function slideNext(){
-	slider[count].classList.remove('active')
-	bullet[count].classList.remove('dot_selected')
-	if(count < nbSlide -1){
-		count++
+	carousel[index].classList.remove('active')
+	dot[index].classList.remove('dot_selected')
+	if(index < nbSlide -1){
+		index++
 	} else {
-		count = 0
+		index = 0
 	}
-	slider[count].classList.add('active')
-	bullet[count].classList.add('dot_selected')
-	console.log(count)
+	carousel[index].classList.add('active')
+	dot[index].classList.add('dot_selected')
+	console.log(index)
 }
 next.addEventListener('click', slideNext)
 
 function slidePrevious(){
-	slider[count].classList.remove('active')
-	bullet[count].classList.remove('dot_selected')
-	if(count > 0){
-		count--
+	carousel[index].classList.remove('active')
+	dot[index].classList.remove('dot_selected')
+	if(index > 0){
+		index--
 	} else {
-		count = nbSlide - 1
+		index = nbSlide - 1
 	}
-	slider[count].classList.add('active')
-	bullet[count].classList.add('dot_selected')
-	console.log(count)
+	carousel[index].classList.add('active')
+	dot[index].classList.add('dot_selected')
+	console.log(index)
 }
 previous.addEventListener('click', slidePrevious)
